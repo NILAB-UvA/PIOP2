@@ -6,6 +6,11 @@ subs=`ls -d1 $bids_dir/sub-????`
 for sub in $subs; do
     base_sub=`basename $sub`
     label=${base_sub//sub-/}
+    if [ -d ../derivatives/mriqc/${base_sub} ]; then
+	echo "Skipping ${base_sub} ..."
+	continue
+    fi
+
     docker run -it --rm -v $bids_dir:/data:ro -v $out_dir:/out poldracklab/mriqc:0.15.0 /data /out participant \
         --participant_label $label \
         --nprocs 5 \

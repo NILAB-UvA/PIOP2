@@ -5,7 +5,7 @@
     "Authors": ["Author1", "Author2", "Author3", "etc."],
     "Acknowledgements": "Put your acknowledgements here",
     "HowToAcknowledge": "Describe how you'd like to be acknowledged here",
-    "Funding": "Put your funding sources here",
+    "Funding": ["Put your funding sources here"],
     "ReferencesAndLinks": ["e.g. data-paper", "(methods-)paper", "etc."],
     "DatasetDOI": "DOI of dataset (if there is one)"
 }

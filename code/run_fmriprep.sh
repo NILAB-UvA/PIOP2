@@ -1,6 +1,6 @@
 bids_dir=..
 out_dir=$bids_dir/derivatives
-n_jobs=10
+n_jobs=4
 
 subs=(`ls -d1 $bids_dir/sub-*`)
 # Run subjects one at the time as to avoid memory issues
@@ -36,3 +36,4 @@ for sub in ${subs[@]}; do
         wait
     fi
 done
+wait

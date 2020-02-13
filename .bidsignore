@@ -1,3 +1,4 @@
 **/*.txt
 **/*.edf
+**/*.mat
 LICENSE
