@@ -38,8 +38,8 @@ if __name__ == '__main__':
     from glob import glob
     coords = [(78, 122, 77), (32, 45, 24)]
     for i, space in enumerate(['FSLHCP1065', 'native']):
-        files = sorted(glob(f'../derivatives/dti_fa/sub*/*{space}_V1.nii.gz'))    
-        out_dir = f'../derivatives/dti_fa/visual_qc/{space}'
+        files = sorted(glob(f'../../derivatives/dti_fa/sub*/*{space}_V1.nii.gz'))    
+        out_dir = f'../../derivatives/dti_fa/visual_qc/{space}'
         
         if not op.isdir(out_dir):
             os.makedirs(out_dir)
