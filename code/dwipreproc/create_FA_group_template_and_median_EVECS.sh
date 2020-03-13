@@ -44,13 +44,13 @@ sub_dirs=($(find ${dwipreproc_dir} -maxdepth 1 -type d -name sub-* -print0 | sor
 for sub_dir in ${sub_dirs[@]}; do
     sub_base=$(basename ${sub_dir})
     
-    fa=${sub_dir}/${sub_base}_model-DTI_desc-WLS_FA.nii.gz
+    fa=${sub_dir}/dwi/${sub_base}_model-DTI_desc-WLS_FA.nii.gz
     cp ${fa} ${fa_dir}/${sub_base}.nii.gz
     
-    mask=${sub_dir}/${sub_base}_desc-brain_mask.nii.gz
+    mask=${sub_dir}/dwi/${sub_base}_desc-brain_mask.nii.gz
     cp ${mask} ${mask_dir}/${sub_base}.nii.gz
 
-    evecs=${sub_dir}/${sub_base}_model-DTI_desc-WLS_EVECS.nii.gz
+    evecs=${sub_dir}/dwi/${sub_base}_model-DTI_desc-WLS_EVECS.nii.gz
     cp ${evecs} ${evecs_dir}/${sub_base}.nii.gz
 done
 
