@@ -20,7 +20,7 @@ for p_log in p_logs:
         this_mapper = resp_rev_mapper
     else:
         this_mapper = resp_mapper
-
+    
     df = pd.read_csv(p_log, skiprows=3, sep='\t')
     pulse_idx = df.loc[df.loc[:, 'Event Type'] == 'Pulse'].index[0]
     df = df.iloc[pulse_idx:, :]
@@ -31,7 +31,7 @@ for p_log in p_logs:
     df = df.loc[df.Code.isin(['1', '2', '3']), :]
     df.onset /= 10000
     df.index = range(df.shape[0])
-    
+
     for i, row in df.iterrows():
         if row['trial_type'] == 'Response':
             tt = 'response'
@@ -81,6 +81,10 @@ for p_log in p_logs:
     corrs.append(n_corr / n_tot)
     corrsm.append(n_corr / (n_corr + n_incorr))
     f_out = f'../../logs/workingmemory/clean/{sub_id}_task-workingmemory_acq-seq_events.tsv'
+    
+    # AAAARGH. So, the onset was logged on the memory screen,
+    # not the start of the trial. Fixing it here.
+    df['onset'] = df['onset'] - 4
     df.to_csv(f_out, sep='\t')
     f_out = f'{bids_dir}/{sub_id}/func/{sub_id}_task-workingmemory_acq-seq_events.tsv'
     if op.isdir(op.dirname(f_out)):
