@@ -29,13 +29,12 @@
       "right": "right hand"
     }
   },
-  "gender": {
-    "LongName": "Gender of face images (in case of emotion trial)",
-    "Description": "Which gender did the presented faces have?",
+  "sex": {
+    "LongName": "Sex of face images (in case of emotion trial)",
+    "Description": "Which sex did the presented faces have?",
     "Levels": {
       "male": "male",
-      "female": "female",
-      "n/a": "none (it was a control trial)"
+      "female": "female"
     }
   }
 }
