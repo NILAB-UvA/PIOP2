@@ -23,7 +23,7 @@
       "ambidextrous": "Ambidextrous"
     }
   },
-  "education": {
+  "education_category": {
     "Description": "University category",
     "Levels": {
       "academic": "Enrolled at an academic university",
@@ -65,4 +65,4 @@
     "Description": "Score on the Openness scale of the NEO-FFI",
     "Units": "Sum of individual items"
   }
-}ß
+}
