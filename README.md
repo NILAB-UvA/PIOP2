@@ -2,7 +2,7 @@ The PIOP2 dataset is part of the Amsterdam Open MRI Collection (AOMIC), a collec
 This dataset contains both raw and preprocessed data (and other "derivatives"), which is available on [Openneuro](https://openneuro.org/datasets/ds002790).
 At present, only the raw data is available; we're in the process of uploading the derivatives.
 
-The data is described in detail in [this preprint](LINK TO PREPRINT).
+The data is described in detail in [this preprint](ADD LINK TO PREPRINT WHEN AVAILABLE).
 In short, raw MRI data is available in `sub-???` directories and the behavioral/psychometric/demographic data can be found in the `participant.tsv` file.
 The `participants.json` file contains more information about the variables (columns) in the `participants.tsv` file.
 
